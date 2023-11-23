@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: polyspace
+    runs-on: Bridge
 
     steps:
     - name: Checkout Repository
@@ -20,8 +20,8 @@ jobs:
 
     - name: Push to Bitbucket
       run: |
-        mkdir shiva
-        cd shiva
+        mkdir jawad
+        cd jawad
         git add .
         git commit -m "push to bitbucket"
         git clone https://appsint:dc2cce27aa5846d5482dccd1ab370673@bitbucket-prod.tcc.etn.com/scm/~e0020874/nsi_48v_dcdcplatform.git
