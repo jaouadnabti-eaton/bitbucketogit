@@ -4,7 +4,7 @@ on: [push]
 jobs:
   bat:
     name: Build and Test
-    runs-on: ubuntu-latest
+    runs-on: win
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -24,7 +24,7 @@ jobs:
       - name: Run MATLAB statement
         uses: ./
         with:
-          command: f = fopen('myscript.m', 'w'); fwrite(f, 'assert(true)'); fclose(f);
+          command: f = fopen('C:\BEAS_SHARED\polyspace_v3\run_pdu_follower.m', 'w'); fwrite(f, 'assert(true)'); fclose(f);
       
       - name: Run MATLAB script
         uses: ./
