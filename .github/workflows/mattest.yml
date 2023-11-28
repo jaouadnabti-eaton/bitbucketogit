@@ -3,7 +3,8 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Commands
-    runs-on: Bridge
+    runs-on: Windows
+             win
     steps:
       - name: Print workspace
         run: |
@@ -12,7 +13,7 @@ jobs:
       - name: run batch script
         run: |
         
-         C:\Users\C9001197\Downloads.\runMscript.bat
+         cmd /c 'C:\Users\C9952825\hello.bat.bat'
           
       - name: Check out repository
         uses: actions/checkout@v3
