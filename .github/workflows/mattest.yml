@@ -2,7 +2,7 @@ name: Run MATLAB Commands on GitHub-Hosted Runner
 on: [push]
 jobs:
   my-job:
-    name: Run MATLAB Commands
+    name: Run 
     runs-on: local
     
     steps:
