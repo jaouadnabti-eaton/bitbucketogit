@@ -3,8 +3,8 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Commands
-    runs-on: Windows
-             win
+    runs-on: win
+             x64
     steps:
       - name: Print workspace
         run: |
