@@ -3,7 +3,7 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Commands
-    runs-on: win
+    runs-on: Windows
     steps:
       - name: Print workspace
         run: |
@@ -11,8 +11,8 @@ jobs:
 
       - name: run batch script
         run: |
-        
-         C:\Users\C9001197\Downloads.\runMscript.bat
+              cmd /c 'C:\Users\C9952825\hello.bat.bat'
+       
           
       - name: Check out repository
         uses: actions/checkout@v3
@@ -23,4 +23,4 @@ jobs:
       - name: Run commands
         uses: matlab-actions/run-command@v1
         with:
-          command: addpath(\'C:\\githubworkflows\\githubactionjenkinsmigration\\githubactionjenkinsmigration\\beas-cict\\BEAS\\Polyspace\\polyspace_v3\'); run_48v_asw_eaton;
+          command: addpath(\'C:\\githubworkflows\\githubactionjenkinsmigration\\githubactionjenkinsmigration\\beas-cict\\BEAS\\Polyspace\\polyspace_v3\');run_48v_asw_eaton;
