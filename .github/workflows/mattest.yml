@@ -3,13 +3,9 @@ on: [push]
 jobs:
   my-job:
     name: Run 
-    runs-on: pet07
+    runs-on: local
     
     steps:
-      - name: Print workspace
-        run: |
-          dir $GITHUB_WORKSPACE
-
       - name: run batch script
         run: |
                cmd /c 'C:\Users\C9952825\hello.bat' 
