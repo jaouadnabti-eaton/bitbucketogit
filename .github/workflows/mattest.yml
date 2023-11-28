@@ -5,7 +5,6 @@ jobs:
     name: Run MATLAB Commands
     runs-on: windows
     steps:
-      - name: Run commands
-        uses: matlab-actions/run-command@v1
-        with:
-          command: addpath(\'Expand-Archive C:\\githubworkflows\\githubactionjenkinsmigration\\githubactionjenkinsmigration\\beas-cict\\BEAS\\Polyspace\\polyspace_v3\'); run_48v_asw_eaton;
+      - name: run batch script
+        run: |
+               cmd /c 'C:\Users\C9952825\hello.bat.bat' 
