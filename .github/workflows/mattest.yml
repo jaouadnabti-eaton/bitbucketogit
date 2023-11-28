@@ -3,7 +3,7 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Commands
-    runs-on: polyspace
+    runs-on: windows
     steps:
       - name: Run commands
         uses: matlab-actions/run-command@v1
