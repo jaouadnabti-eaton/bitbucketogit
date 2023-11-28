@@ -3,7 +3,7 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Commands
-    runs-on: Bridge
+    runs-on: 48v
     steps:
       - name: Print workspace
         run: |
