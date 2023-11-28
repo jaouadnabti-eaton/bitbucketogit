@@ -3,8 +3,8 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Commands
-    runs-on: windows
+    runs-on: Root
     steps:
       - name: run batch script
         run: |
-               cmd /c 'C:\Users\C9952825\hello.bat.bat' 
+               cmd /c 'C:\Users\C9952825\hello.bat' 
