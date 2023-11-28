@@ -3,7 +3,7 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Commands
-    runs-on: Root
+    runs-on: local
     steps:
       - name: run batch script
         run: |
