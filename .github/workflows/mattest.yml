@@ -3,7 +3,7 @@ on: [push]
 jobs:
   my-job:
     name: Run 
-    runs-on: local
+    runs-on: pet07
     
     steps:
       - name: Print workspace
