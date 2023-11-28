@@ -3,24 +3,9 @@ on: [push]
 jobs:
   my-job:
     name: Run MATLAB Commands
-    runs-on: Matlab
-    
+    runs-on: polyspace
     steps:
-      - name: Print workspace
-        run: |
-          dir $GITHUB_WORKSPACE
-
-      - name: run batch script
-        run: |
-               cmd /c 'C:\Users\C9952825\hello.bat.bat'       
-          
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      
-      - name: Set up MATLAB
-        uses: matlab-actions/setup-matlab@v1
       - name: Run commands
         uses: matlab-actions/run-command@v1
         with:
-          command: addpath(\'C:\\githubworkflows\\githubactionjenkinsmigration\\githubactionjenkinsmigration\\beas-cict\\BEAS\\Polyspace\\polyspace_v3\');run_48v_asw_eaton;
+          command: addpath(\'Expand-Archive C:\\githubworkflows\\githubactionjenkinsmigration\\githubactionjenkinsmigration\\beas-cict\\BEAS\\Polyspace\\polyspace_v3\'); run_48v_asw_eaton;
