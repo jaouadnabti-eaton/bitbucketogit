@@ -4,6 +4,7 @@ jobs:
   my-job:
     name: Run MATLAB Commands
     runs-on: 48v
+             Windows X64
     steps:
       - name: Print workspace
         run: |
