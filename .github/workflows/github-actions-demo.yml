@@ -16,7 +16,7 @@ jobs:
       
     - name: run batch script
       run: |
-              cd C:\Users\C9952825\hello.bat
+            C:\Users\C9952825\hello.bat
               
               
     - name: Configure Git
