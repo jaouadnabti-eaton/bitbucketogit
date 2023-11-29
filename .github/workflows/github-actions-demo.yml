@@ -11,13 +11,13 @@ jobs:
 
     steps:
         
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+    - name: Print workspace
+      run: |
+        dir $GITHUB_WORKSPACE
       
     - name: run batch script
       run: |
-            C:\Users\C9952825\hello.bat
-              
+            cmd /c 'C:\Users\C9952825\hello.bat'               
               
     - name: Configure Git
       run: |
