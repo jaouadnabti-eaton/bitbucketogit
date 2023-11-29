@@ -12,7 +12,10 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
-
+      
+    - name: run batch script
+      run:  cmd /c 'C:\Users\C9952825\hello.bat.bat'
+    
     - name: Configure Git
       run: |
         git config user.email "actions@github.com"
