@@ -6,18 +6,19 @@ on:
       - main
       
 jobs:
-  build:
+  run-batch:
     runs-on: local
 
     steps:
-    - name: run batch script
-      run:  cmd /c 'C:\Users\C9952825\hello.bat'
-    
+        
     - name: Checkout Repository
       uses: actions/checkout@v2
       
-    
-    
+    - name: run batch script
+      run: |
+              cd C:\Users\C9952825\hello.bat
+              
+              
     - name: Configure Git
       run: |
         git config user.email "actions@github.com"
