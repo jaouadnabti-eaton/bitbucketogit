@@ -1,34 +1,25 @@
-name: github-actions-demo
-
-on:
-  push:
-    branches:
-      - main
-      
+name: Run MATLAB Commands on GitHub-Hosted Runner
+on: [push]
 jobs:
-  build:
+  my-job:
+    name: Run MATLAB Commands
     runs-on: local
-
+    
     steps:
-    - name: run batch script
-      run:  cmd /c 'C:\Users\C9952825\hello.bat'
-    
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      
-    
-    
-    - name: Configure Git
-      run: |
-        git config user.email "actions@github.com"
-        git config user.name "GitHub Actions"
+      - name: Print workspace
+        run: |
+          dir $GITHUB_WORKSPACE
+      - name: run batch script
+        run: |
+               cmd /c 'C:\Users\C9952825\hello.bat.bat'       
+          
+      - name: Check out repository
+        uses: actions/checkout@v3
 
-    - name: Push to Bitbucket
-      run: |
-        mkdir shiva
-        cd shiva
-        git add .
-        git commit -m "push to bitbucket"
-        git clone https://appsint:dc2cce27aa5846d5482dccd1ab370673@bitbucket-prod.tcc.etn.com/scm/~e0020874/nsi_48v_dcdcplatform.git
-        git status
-        dir
+      
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v1
+      - name: Run commands
+        uses: matlab-actions/run-command@v1
+        with:
+          command: addpath(\'C:\\githubworkflows\\githubactionjenkinsmigration\\githubactionjenkinsmigration\\beas-cict\\BEAS\\Polyspace\\polyspace_v3\');run_48v_asw_eaton;
